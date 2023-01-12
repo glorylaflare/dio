@@ -1,0 +1,63 @@
+.acordeon {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 1rem 0;
+    border: 1px solid rgb(48, 48, 48);
+    border-radius: 1.5rem;
+    transition: .5s;
+}
+
+.acordeon-open,
+.acordeon:hover {
+    background-color: #519de4;
+    border-color: #519de4;
+}
+
+.acordeon .trigger {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    color: rgb(48, 48, 48);
+    padding: 1.5rem 2.2rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.acordeon .trigger h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    text-align: start;
+}
+
+.acordeon .trigger::after {
+    content: '';
+    display: inline-block;
+    width: 1.8rem;
+    height: 1.8rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('../img/icons/icons8-chevron-down-48.png');
+    transition: .2s;
+}
+
+.acordeon-open .trigger::after {
+    transform: rotateX(180deg);
+}
+
+.acordeon .content {
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+}
+
+.acordeon-open .content{
+    display: block;
+    padding: 0 1rem 1rem 2rem;
+    height: 100%;
+    opacity: 1;
+}

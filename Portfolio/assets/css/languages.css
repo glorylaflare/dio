@@ -1,0 +1,33 @@
+.languages {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.languages li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 1rem 1rem 1rem 0;
+    list-style: none;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.languages li::before {
+    content: '';
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: .25rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('../img/icons/icons8-done-48.png');
+}
